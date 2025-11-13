@@ -9,6 +9,14 @@ pull_request_rules:
       label:
         toggle:
           - size/L
+  - name: Assign XL t-shirt size to large PRs
+    description: Assign a t-shirt size label to a pull request with 500 or more modified lines.
+    conditions:
+      - "#modified-lines >= 500"
+    actions:
+      label:
+        toggle:
+          - size/XL
   - name: Label conflicting pull requests
     description: Add a label to a pull request with conflict to spot it easily
     conditions:
